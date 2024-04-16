@@ -1,8 +1,8 @@
-const { registrationUserSchema } = require('../schemas');
+const { creatingSchema } = require('../schemas');
 
 module.exports.validateUser = async (req, res, next) => {
     try {
-        await registrationUserSchema.validate(req.body);
+        await creatingSchema.validate(req.body);
         
         return next();
     } catch (error) {

@@ -14,7 +14,9 @@ app.get('/users', UserController.getAllUsers); // http://localhost:5000/users
 // роут на отримання якогось конкретного юзера
 app.get('/user/:userId', UserController.getOneUser);
 // роут на видалення якогось конкретного користувача
-app.get('/user/userId', UserController.getDeleteOneUser);
+app.get('/user/userId', UserController.deleteOneUser);
+// роут на оновлення конкретного користувача
+app.put('/user/:userId', bodyParser, UserController.updateUser);
 
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
