@@ -13,7 +13,8 @@ app.post('/user', bodyParser, validateUser, UserController.registerUser);
 app.get('/users', UserController.getAllUsers); // http://localhost:5000/users
 // роут на отримання якогось конкретного юзера
 app.get('/user/:userId', UserController.getOneUser);
-
+// роут на видалення якогось конкретного користувача
+app.get('/user/userId', UserController.getDeleteOneUser);
 
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);

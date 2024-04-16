@@ -1,0 +1,1 @@
+DELETE OST http://localhost:5000/user/5 HTTP/1.1
